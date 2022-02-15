@@ -6,18 +6,12 @@ module unload perl
 module unload python
 module load funannotate
 module load workspace/scratch
-#conda deactivate
-#conda activate funannot_test_p2g
 which funannotate
-#which diamond
 diamond version
 CPU=1
 if [ $SLURM_CPUS_ON_NODE ]; then
     CPU=$SLURM_CPUS_ON_NODE
 fi
-ulimit -Sn
-ulimit -Hn
-ulimit -n 30000
 
 BUSCO=ascomycota_odb10
 #fungi_odb10 # This could be changed to the core BUSCO set you want to use
