@@ -1,0 +1,12 @@
+Assembly statistics for: 44736-14_fullMito.fasta
+   CONTIG COUNT  =  336
+   TOTAL LENGTH  =  21362174
+            MIN  =  1011
+            MAX  =  634562
+         MEDIAN  =  24887
+           MEAN  =  63577.90
+            L50  =  41
+            N50  =  163311
+            L90  =  137
+            N90  =  40826
+            GC%  =  47.88

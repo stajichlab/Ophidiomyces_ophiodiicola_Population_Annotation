@@ -38,7 +38,8 @@ if [ $N -gt $MAX ]; then
     echo "$N is too big, only $MAX lines in $SAMPFILE"
     exit
 fi
-SEED_SPECIES=anidulans
+SEED_SPECIES=ophidiomyces_ophiodiicola
+AUGSPECIES=ophidiomyces_ophiodiicola
 #export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
 
 export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
@@ -62,9 +63,9 @@ do
       exit
     fi
     echo "using seed species $SEED_SPECIES with busco; base is $BASE strain is $STRAIN"
-	funannotate predict --cpus $CPU --keep_no_stops --SeqCenter $SEQCENTER --busco_db $BUSCO --optimize_augustus \
+	funannotate predict --cpus $CPU --keep_no_stops --SeqCenter $SEQCENTER --busco_db $BUSCO \
 	--strain "$STRAIN" --min_training_models 100 \
-	-i $MASKED --name $LOCUSTAG \
+	-i $MASKED --name $LOCUSTAG --augustus_species $AUGSPECIES \
 	-s "$SPECIES"  -o $OUTDIR/$BASE --busco_seed_species $SEED_SPECIES --tmpdir $SCRATCH \
 	--ploidy 1
 	#--AUGUSTUS_CONFIG_PATH $AUGUSTUS_CONFIG_PATH \

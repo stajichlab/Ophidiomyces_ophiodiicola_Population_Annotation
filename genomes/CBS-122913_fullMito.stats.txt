@@ -1,0 +1,12 @@
+Assembly statistics for: CBS-122913_fullMito.fasta
+   CONTIG COUNT  =  116
+   TOTAL LENGTH  =  21970319
+            MIN  =  777
+            MAX  =  1803704
+         MEDIAN  =  50704
+           MEAN  =  189399.30
+            L50  =  12
+            N50  =  506472
+            L90  =  42
+            N90  =  122144
+            GC%  =  47.64

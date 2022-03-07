@@ -1,0 +1,12 @@
+Assembly statistics for: UAMH-6642_fullMito.fasta
+   CONTIG COUNT  =  381
+   TOTAL LENGTH  =  21554944
+            MIN  =  1017
+            MAX  =  496010
+         MEDIAN  =  16746
+           MEAN  =  56574.66
+            L50  =  46
+            N50  =  144327
+            L90  =  150
+            N90  =  32505
+            GC%  =  47.74

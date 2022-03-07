@@ -1,0 +1,12 @@
+Assembly statistics for: CBS-102663_fullMito.fasta
+   CONTIG COUNT  =  536
+   TOTAL LENGTH  =  21508054
+            MIN  =  777
+            MAX  =  362661
+         MEDIAN  =  11313
+           MEAN  =  40126.97
+            L50  =  54
+            N50  =  122006
+            L90  =  203
+            N90  =  22543
+            GC%  =  47.72

@@ -1,0 +1,12 @@
+Assembly statistics for: UAMH-9985_fullMito.fasta
+   CONTIG COUNT  =  136
+   TOTAL LENGTH  =  21310251
+            MIN  =  1124
+            MAX  =  2151924
+         MEDIAN  =  18935
+           MEAN  =  156693.02
+            L50  =  10
+            N50  =  765378
+            L90  =  33
+            N90  =  141939
+            GC%  =  48.07

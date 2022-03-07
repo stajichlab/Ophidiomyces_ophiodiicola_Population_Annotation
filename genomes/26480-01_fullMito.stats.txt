@@ -1,0 +1,12 @@
+Assembly statistics for: 26480-01_fullMito.fasta
+   CONTIG COUNT  =  464
+   TOTAL LENGTH  =  21540599
+            MIN  =  1023
+            MAX  =  378269
+         MEDIAN  =  15387
+           MEAN  =  46423.70
+            L50  =  54
+            N50  =  130199
+            L90  =  185
+            N90  =  24643
+            GC%  =  47.71

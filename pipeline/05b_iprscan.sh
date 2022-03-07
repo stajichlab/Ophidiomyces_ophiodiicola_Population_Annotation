@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --ntasks 24 --nodes 1 --mem 96G -p intel
+#SBATCH --ntasks 24 --nodes 1 --mem 64G -p intel
 #SBATCH --time 72:00:00 --out logs/iprscan.%a.log
 module unload miniconda2
 module unload miniconda3
@@ -32,6 +32,7 @@ IFS=,
 tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN VERSION PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
 do
   BASE=$(echo -n ${SPECIES}_${STRAIN}.${VERSION} | perl -p -e 's/\s+/_/g')
+  BASE=$(echo -n ${STRAIN} | perl -p -e 's/\s+/_/g; s/NWHC_//; s/(CBS|UAMH)_/$1-/')
   name=$BASE
   echo "$BASE"
   MASKED=$(realpath $INDIR/$BASE.masked.fasta)

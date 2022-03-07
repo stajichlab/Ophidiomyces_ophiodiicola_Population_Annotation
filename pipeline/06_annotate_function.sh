@@ -3,7 +3,7 @@
 #SBATCH --ntasks=16 --mem 64gb
 #SBATCH --output=logs/annotfunc.%a.log
 #SBATCH --time=2-0:00:00
-#SBATCH -p intel -J annotfunc
+#SBATCH -p batch,intel -J annotfunc
 
 module unload miniconda2
 module unload miniconda3
@@ -11,14 +11,14 @@ module unload perl
 module unload python
 module load funannotate
 module load phobius
-module laod workspace/scratch
+module load workspace/scratch
 
 export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
 CPUS=$SLURM_CPUS_ON_NODE
 OUTDIR=annotate
 INDIR=genomes
 SAMPFILE=samples.csv
-BUSCO=mucoromycota_odb10
+BUSCO=ascomycota_odb10
 
 if [ -z $CPUS ]; then
   CPUS=1
@@ -43,6 +43,8 @@ IFS=,
 tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN VERSION PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
 do
   BASE=$(echo -n ${SPECIES}_${STRAIN}.${VERSION} | perl -p -e 's/\s+/_/g')
+  BASE=$(echo -n ${STRAIN} | perl -p -e 's/\s+/_/g; s/NWHC_//; s/(CBS|UAMH)_/$1-/')
+  name=$BASE
   STRAIN_NOSPACE=$(echo -n "$STRAIN" | perl -p -e 's/\s+/_/g')
   echo "$BASE"
   MASKED=$(realpath $INDIR/$BASE.masked.fasta)

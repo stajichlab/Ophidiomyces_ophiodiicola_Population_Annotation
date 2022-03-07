@@ -24,7 +24,7 @@ if [ -z ${SLURM_ARRAY_JOB_ID} ]; then
 fi
 GENOMEFOLDER=genomes
 EXT=sorted.fasta
-LINEAGE=fungi_odb10
+LINEAGE=ascomycota_odb10
 OUTFOLDER=BUSCO
 TEMP=/scratch/${SLURM_ARRAY_JOB_ID}_${N}
 mkdir -p $TEMP $BUSCO

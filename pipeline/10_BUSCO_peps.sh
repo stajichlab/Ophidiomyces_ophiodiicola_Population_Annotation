@@ -21,11 +21,10 @@ if [ ! $N ]; then
     fi
 fi
 ANNOTFOLDER=annotate
-LINEAGE=fungi_odb10
+LINEAGE=ascomycota_odb10
 OUTFOLDER=BUSCO_pep
 TEMP=$SCRATCH
-
-mkdir -p $BUSCO
+mkdir -p $OUTFOLDER
 SAMPLEFILE=samples.csv
 SEED_SPECIES=entomophthora_muscae_ucb
 IFS=,
@@ -33,6 +32,7 @@ tail -n +2 $SAMPLEFILE | sed -n ${N}p | while read SPECIES STRAIN VERSION PHYLUM
 do
 	BASE=$(echo -n ${SPECIES}_${STRAIN}.${VERSION} | perl -p -e 's/\s+/_/g')
 	SPECIESSTRAIN=$(echo -n ${SPECIES}_${STRAIN} | perl -p -e 's/\s+/_/g')
+	BASE=$(echo -n ${STRAIN} | perl -p -e 's/\s+/_/g; s/NWHC_//; s/(CBS|UAMH)_/$1-/')
 	for type in predict update
 	do
 	    INPEP=$ANNOTFOLDER/${BASE}/${type}_results/${SPECIESSTRAIN}.proteins.fa
@@ -46,7 +46,7 @@ do
 	    	echo "Already have run ${BASE}_proteins in folder busco - do you need to delete it to rerun?"
 	    	continue
 	    else
-		module load busco/5.1.2
+		module load busco/5.2.2
 		busco -m prot -l $LINEAGE -c $CPU -o ${BASE}_${type}_proteins --out_path ${OUTFOLDER} --offline  \
 		    --in $INPEP --download_path $BUSCO_LINEAGES
 	    fi

@@ -1,0 +1,12 @@
+Assembly statistics for: UAMH-10296_fullMito.fasta
+   CONTIG COUNT  =  119
+   TOTAL LENGTH  =  21034161
+            MIN  =  1026
+            MAX  =  1937351
+         MEDIAN  =  13348
+           MEAN  =  176757.66
+            L50  =  11
+            N50  =  720126
+            L90  =  32
+            N90  =  186097
+            GC%  =  48.11
