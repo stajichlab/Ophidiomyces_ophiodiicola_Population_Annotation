@@ -1,4 +1,4 @@
-Assembly statistics for: CBS-122913_fullMito.fasta
+Assembly statistics for: genomes/CBS-122913_fullMito.fasta
    CONTIG COUNT  =  116
    TOTAL LENGTH  =  21970319
             MIN  =  777

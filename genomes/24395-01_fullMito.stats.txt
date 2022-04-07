@@ -1,4 +1,4 @@
-Assembly statistics for: 24395-01_fullMito.fasta
+Assembly statistics for: genomes/24395-01_fullMito.fasta
    CONTIG COUNT  =  387
    TOTAL LENGTH  =  21602599
             MIN  =  1001

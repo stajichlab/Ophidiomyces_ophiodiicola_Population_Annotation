@@ -1,4 +1,4 @@
-Assembly statistics for: UAMH-9985_fullMito.fasta
+Assembly statistics for: genomes/UAMH-9985_fullMito.fasta
    CONTIG COUNT  =  136
    TOTAL LENGTH  =  21310251
             MIN  =  1124

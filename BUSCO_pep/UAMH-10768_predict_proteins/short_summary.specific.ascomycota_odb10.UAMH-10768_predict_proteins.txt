@@ -1,0 +1,17 @@
+# BUSCO version is: 5.2.2 
+# The lineage dataset is: ascomycota_odb10 (Creation date: 2020-09-10, number of genomes: 365, number of BUSCOs: 1706)
+# Summarized benchmarking in BUSCO notation for file /bigdata/stajichlab/shared/projects/Onygenales/Ophidiomyces/Annotate/annotate/UAMH-10768/predict_results/Ophidiomyces_ophiodiicola_UAMH_10768.proteins.fa
+# BUSCO was run in mode: proteins
+
+	***** Results: *****
+
+	C:94.2%[S:94.0%,D:0.2%],F:2.1%,M:3.7%,n:1706	   
+	1607	Complete BUSCOs (C)			   
+	1604	Complete and single-copy BUSCOs (S)	   
+	3	Complete and duplicated BUSCOs (D)	   
+	35	Fragmented BUSCOs (F)			   
+	64	Missing BUSCOs (M)			   
+	1706	Total BUSCO groups searched		   
+
+Dependencies and versions:
+	hmmsearch: 3.1

@@ -1,4 +1,4 @@
-Assembly statistics for: 26583-02_fullMito.fasta
+Assembly statistics for: genomes/26583-02_fullMito.fasta
    CONTIG COUNT  =  375
    TOTAL LENGTH  =  21607780
             MIN  =  1001

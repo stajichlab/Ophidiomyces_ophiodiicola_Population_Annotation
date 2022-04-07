@@ -4,4 +4,4 @@
 module load parallel
 
 mkdir -p reports
-ls genomes/*.fasta | parallel -j 4 python  scripts_Hiltunen/find_telomeres.py {} \> reports/{/.}.telomere_report.txt
+ls genomes/*.fasta | grep -v masked | parallel -j 4 python  scripts_Hiltunen/find_telomeres.py {} \> reports/{/.}.telomere_report.txt
