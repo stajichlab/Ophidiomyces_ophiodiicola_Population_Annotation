@@ -21,12 +21,11 @@ if [ ! $N ]; then
     fi
 fi
 ANNOTFOLDER=annotate
-LINEAGE=ascomycota_odb10
+LINEAGE=onygenales_odb10
 OUTFOLDER=BUSCO_pep
 TEMP=$SCRATCH
 mkdir -p $OUTFOLDER
 SAMPLEFILE=samples.csv
-SEED_SPECIES=entomophthora_muscae_ucb
 IFS=,
 tail -n +2 $SAMPLEFILE | sed -n ${N}p | while read SPECIES STRAIN VERSION PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
 do
